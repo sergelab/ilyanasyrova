@@ -32,7 +32,11 @@ jQuery(function($) {
             $(this).css('opacity', 0);
             $(this).hide();
         });
-        var current = $('#slides > #' + slide);
+        if (slide == '') {
+            var current = '';
+        } else {
+        	var current = $('#slides #' + slide);
+        }
 
         if (current.length == 0) {
             $('#home').show();
