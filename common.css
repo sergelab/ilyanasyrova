@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'robotothin';
+    src: url('fonts/Roboto-Thin-webfont.eot');
+    src: url('fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+    font: 400 14px / 20px "robotothin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* Links */
+/*a { background: transparent; }
+a:focus { outline: thin dotted; }
+a:active, a:hover { outline: 0; }
+*/
+
+h2 {
+/*    margin-bottom: 0.375em;*/
+}
+
+/* Embedded content */
+img { border: 0; }
+
+/* Tools */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    color: #eeef9e;
+    background-color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Link styles */
+a {
+    color: #eeef9e;
+}
+a:link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+a.bottom-up-substrate,
+a.bottom-down-substrate {
+    width: 100%;
+    height: 50px;
+    background-color: #bdaa77;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+a.bottom-up-substrate {
+    background-image: url(images/arrow_top.png);
+}
+a.bottom-down-substrate {
+    background-image: url(images/arrow_down.png);
+}
+
+a.right-substrate,
+a.left-substrate {
+    width: 50px;
+    height: 100%;
+    background-color: #bdaa77;
+    position: fixed;
+    opacity: 0.7;
+    top: 0;
+}
+a.right-substrate {
+    right: 0; 
+    background-image: url(images/arrow-right.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+a.left-substrate {
+    left: 0;
+    background-image: url(images/arrow-left.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+/* Content styles */
+#slides blockquote {
+    
+}
+#slides blockquote h2 {
+    font-size: 24px;
+    font-weight: 300;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    position: fixed;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#slides .slide {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+#slides .slide.start {
+    opacity: 1;
+}
+#slides .slide.show {
+    z-index: 2;
+}
+#slides .front-container {
+    width: 90%;
+    margin: 0px auto;
+}
+#slides .bg-img {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#slides .bg-img-home {
+    background-image: url(images/main_cover.jpg);
+}
+#slides .bg-img-about {
+    background-image: url(images/about_cover.jpg);
+}
+#slides .bg-img-contacts {
+    background-image: url(images/contacts.jpg);
+}
+#slides .bg-img-postcards {
+    background-image: url(images/postcards.jpg);
+}
+#slides .bg-img-postcards-hall-1 {
+    background-image: url(images/postcards_hall_1.jpg);
+}
+#slides .bg-img-hall-1 {
+    background-image: url(images/hall_1.jpg);
+}
+#slides .bg-img-hall-2 {
+    background-image: url(images/hall_2.jpg);
+}
+#slides .bg-img-hall-3 {
+    background-image: url(images/hall_3.jpg);
+}
+
+address {
+    position: fixed;
+    right: 10%;
+    bottom: 1%;
+    z-index: 100;
+    font-size: 10px;
+    font-style: normal;
+}
+.logo-block { position: fixed; left: 5em; top: 5em; z-index: 100; }
+.logo-block .col:first-child { margin-right: 25px; }
+.logo-block .col { display: inline-block; }
+.logo-block .col .small { margin-top: 5px; }
+.width-1-1 { width: 100%; }
+.right { text-align: right }
+.left { text-align: left; }
+.logo-block-sep {
+    position: relative;
+    height: 40px;
+    width: 1px;
+    background-color: #decd88;
+    left: 48%;
+    top: -40px;
+}
+
+
+a, .small a {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 2.5em;
+    text-decoration: none;
+}
+.small a {
+    font-size: 1.0em;
+}
+a:hover {
+    text-decoration: none;
+}
+
+#slides #home a.about-link {
+    position: fixed;
+    bottom: 4%;
+    left: 48%;
+    z-index: 100;
+}
+
+#slides #about p.info {
+    font-size: 1.5em;
+    width: 50%;
+    position: fixed;
+    left: 10%;
+    bottom: 15%;
+}
+
+#slides #contacts p.info {
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: 200;
+    width: 45%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+}
+#slides #contacts p.info::after {
+    clear: both;
+}
+
+@media only screen and (min-width: 320px) {
+    #slides blockquote {
+        position: relative;
+        z-index: 100;
+    }
+    #slides blockquote h2 {
+        font-size: 12px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    #slides blockquote h2.home {
+        left: 10%;
+        bottom: 10%;
+    }
+    #slides img {
+        width: 50%;
+    }
+    a, .small a {
+        font-style: normal;
+        font-weight: 100;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    .small a {
+        font-size: 0.5em;
+    }
+    .logo-block-sep {
+        height: 25px;
+    }
+}
+@media only screen and (min-width: 481px) {
+    #slides blockquote {
+        position: relative;
+        z-index: 100;
+    }
+    #slides blockquote h2 {
+        font-size: 14px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    #slides blockquote h2.home {
+        left: 10%;
+        bottom: 10%;
+    }
+    
+    #slides img {
+        width: 50%;
+    }
+    a, .small a {
+        font-style: normal;
+        font-weight: 100;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    .small a {
+        font-size: 0.5em;
+    }
+    .logo-block-sep {
+        height: 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #slides blockquote {
+        position: relative;
+        z-index: 100;
+    }
+    #slides blockquote h2 {
+        font-size: 24px;
+        font-weight: 300;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        position: fixed;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    #slides blockquote h2.home {
+        left: 10%;
+        bottom: 15%;
+    }
+    #slides .slide {
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    #slides .slide.start { opacity: 1; }
+    #slides .slide.show { z-index: 2; }
+    #slides .front-container {
+        padding: 0;
+        width: auto;
+    }
+    #slides .bg-img {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #slides .bg-img-home {
+        background-image: url(images/main_cover.jpg);
+    }
+    #slides .bg-img-about {
+        background-image: url(images/about_cover.jpg);
+    }
+    #slides img {
+        width: 100%;
+    }
+    a, .small a {
+        font-size: 2.5em;
+    }
+    .small a {
+        font-size: 1.0em;
+    }
+    .logo-block-sep {
+        position: relative;
+        height: 40px;
+        width: 1px;
+        background-color: #decd88;
+        left: 48%;
+        top: -40px;
+    }
+}
+
+@media only screen and (min-width: 1030px) {
+}
+
+@media only screen and (min-width: 1240px) {
+    
+}
+
+/* RETINA x2 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+@media print {
+    * {
+        background: transparent !important;
+    }
+}
