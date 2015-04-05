@@ -1,8 +1,9 @@
 jQuery(function($) {
     $(document).ready(function() {
-        if (!device.ipod() || !device.mobile() || !device.iphone() || !device.android() || !device.fxosPhone() || !device.blackberryTablet()) {
+        if (!(device.ipod() || device.mobile() || device.iphone() || device.android() || device.fxosPhone() || device.blackberryTablet())) {
             window.location = 'http://www.ilyanasyrova.com';
         }
+        $('#container').removeClass('hidden');
         if ($('body').hasClass('home')) {
             initFrontpage();
         }
