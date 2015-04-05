@@ -218,8 +218,8 @@ a:hover {
     font-size: 1.5em;
     width: 50%;
     position: fixed;
-    left: 10%;
-    bottom: 15%;
+    left: 1em;
+    bottom: 45%;
 }
 
 #slides #contacts p.info {

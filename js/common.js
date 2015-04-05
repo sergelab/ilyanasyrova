@@ -1,5 +1,8 @@
 jQuery(function($) {
     $(document).ready(function() {
+        if (device.ipod() || device.mobile() || device.iphone() || device.android() || device.fxosPhone() || device.blackberryTablet()) {
+            window.location = 'http://www.m.ilyanasyrova.com';
+        }
         if ($('body').hasClass('home')) {
             initFrontpage();
         }
@@ -24,7 +27,6 @@ jQuery(function($) {
     });
     
     function switchSlide(slide) {
-        // console.log('switching "' + slide + '"');
         $('#slides').find('.slide').each(function() {
             $(this).animate({opacity: 0}, 1000);
         })
@@ -37,7 +39,6 @@ jQuery(function($) {
         } else {
         	var current = $('#slides #' + slide);
         }
-
         if (current.length == 0) {
             $('#home').show();
             $('#home').addClass('show').animate({opacity: 1.0}, 1000);
