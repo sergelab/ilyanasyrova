@@ -203,7 +203,7 @@ ul.menu > li > a { color: #000; }
     position: fixed;
     font-size: 2em;
 }
-.hidden { display: none; }
+.hidden { display: none; visibility: hidden; }
 .portrait { display: none; }
 .landscape-joke { display: none; }
 

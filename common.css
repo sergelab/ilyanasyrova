@@ -234,7 +234,7 @@ a:hover {
 #slides #contacts p.info::after {
     clear: both;
 }
-.hidden { display: none; }
+.hidden { display: none; visibility: hidden; }
 @media only screen and (min-width: 320px) {
     #slides blockquote {
         position: relative;
