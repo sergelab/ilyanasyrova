@@ -3,6 +3,7 @@ jQuery(function($) {
         if (device.ipod() || device.mobile() || device.iphone() || device.android() || device.fxosPhone() || device.blackberryTablet()) {
             window.location = 'http://www.m.ilyanasyrova.com';
         }
+        $('#container').toggleClass('hidden');
         if ($('body').hasClass('home')) {
             initFrontpage();
         }
