@@ -1,6 +1,6 @@
 jQuery(function($) {
     $(document).ready(function() {
-        if (device.ipod() || device.mobile() || device.iphone() || device.android() || device.fxosPhone() || device.blackberryTablet()) {
+        if (device.table() || device.ipad() || device.androidTable() || device.ipod() || device.mobile() || device.iphone() || device.android() || device.fxosPhone() || device.fxosTable() || device.fxos() || device.blackberryTablet()) {
             window.location = 'http://www.m.ilyanasyrova.com';
         } else {
             $('#container').toggleClass('hidden');
