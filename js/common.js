@@ -2,19 +2,20 @@ jQuery(function($) {
     $(document).ready(function() {
         if (device.ipod() || device.mobile() || device.iphone() || device.android() || device.fxosPhone() || device.blackberryTablet()) {
             window.location = 'http://www.m.ilyanasyrova.com';
+        } else {
+            $('#container').toggleClass('hidden');
+            if ($('body').hasClass('home')) {
+                initFrontpage();
+            }
+    
+            switchSlide(location.hash.slice(1));
+    
+            $('a.map-link').on('click', function(e) {
+                var currentAttrValue = $(this).attr('href');
+                switchSlide(currentAttrValue.slice(1));
+                // e.preventDefault();
+            });
         }
-        $('#container').toggleClass('hidden');
-        if ($('body').hasClass('home')) {
-            initFrontpage();
-        }
-
-        switchSlide(location.hash.slice(1));
-
-        $('a.map-link').on('click', function(e) {
-            var currentAttrValue = $(this).attr('href');
-            switchSlide(currentAttrValue.slice(1));
-            // e.preventDefault();
-        });
     });
 
     $(window).resize(function() {
